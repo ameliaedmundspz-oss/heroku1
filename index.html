@@ -1,422 +1,1618 @@
 <!DOCTYPE html>
+<html lang="ja">
 
-<html lang="en">
+<!-- Mirrored from thegardenculture.online/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 May 2026 04:53:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
+<!-- Privacy-friendly analytics by Plausible -->
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Japan Fashion Hub</title>
-
-<meta name="description" content="Japan Fashion Hub showcases the latest Japanese fashion, including men's and women's wear and accessories.">
-<meta name="keywords" content="Japanese fashion, men, women, polo shirts, fashion shopping">
-<meta name="author" content="Japan Fashion Hub">
-
+<title>ザ・ガーデン・カルチャー - モダン・プラント・ライフスタイル・ブランド</title>
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="../cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#4A7C59',
+secondary: '#8FBC8F'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+},
+fontFamily: {
+'pacifico': ['Pacifico', 'serif'],
+'inter': ['Inter', 'sans-serif']
+}
+}
+}
+}
+</script>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+:where([class^="ri-"])::before {
+content: "\f3c2";
 }
-
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-background:#fff;
-color:#222;
-line-height:1.6;
+* {
+font-family: 'Inter', 'Hiragino Sans', 'Yu Gothic', sans-serif;
 }
-
-img{
-width:100%;
-display:block;
+.fade-in {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s ease-out;
 }
-
-a{
-text-decoration:none;
-color:inherit;
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
 }
-
-.container{
-width:95%;
-max-width:1400px;
-margin:auto;
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=modern%20indoor%20garden%20with%20lush%20green%20plants%20in%20bright%20natural%20light%2C%20minimalist%20white%20interior%20design%2C%20large%20windows%2C%20peaceful%20atmosphere%2C%20clean%20contemporary%20home%20decor%2C%20botanical%20lifestyle%20photography&amp;width=1920&amp;height=1080&amp;seq=hero001&amp;orientation=landscape');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
-
-header{
-background:#082b5c;
-color:#fff;
-padding:15px 0;
-position:sticky;
-top:0;
-z-index:100;
+.floating {
+animation: floating 3s ease-in-out infinite;
 }
-
-.nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
+@keyframes floating {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
 }
-
-.logo{
-font-size:28px;
-font-weight:bold;
+.slide-up {
+transform: translateY(100%);
+transition: transform 0.3s ease-out;
 }
-
-.menu{
-display:flex;
-gap:20px;
-font-size:14px;
+.slide-up.active {
+transform: translateY(0);
 }
-
-.hero{
-padding:20px 0;
+.navbar-solid {
+background-color: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-.hero-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
+.hover-scale {
+transition: transform 0.3s ease;
 }
-
-.hero-card{
-position:relative;
-overflow:hidden;
+.hover-scale:hover {
+transform: scale(1.05);
 }
-
-.hero-card img{
-height:500px;
-object-fit:cover;
+.mobile-menu {
+transform: translateX(-100%);
+transition: transform 0.3s ease-out;
 }
-
-.hero-text{
-position:absolute;
-bottom:20px;
-left:20px;
-color:#fff;
-font-size:24px;
-font-weight:bold;
-text-shadow:0 2px 10px rgba(0,0,0,.6);
-}
-
-.section-title{
-text-align:center;
-font-size:34px;
-margin:50px 0 25px;
-font-weight:700;
-}
-
-.category-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-margin-bottom:60px;
-}
-
-.category-card{
-position:relative;
-}
-
-.category-card img{
-height:450px;
-object-fit:cover;
-}
-
-.category-name{
-position:absolute;
-bottom:30px;
-left:30px;
-font-size:48px;
-color:#fff;
-font-weight:bold;
-letter-spacing:4px;
-text-shadow:0 2px 8px rgba(0,0,0,.6);
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.product{
-text-align:center;
-}
-
-.product img{
-height:320px;
-object-fit:cover;
-background:#f7f7f7;
-}
-
-.product h3{
-font-size:14px;
-margin:10px 0;
-}
-
-.price{
-font-weight:bold;
-color:#082b5c;
-}
-
-.story{
-padding:80px 0;
-}
-
-.story-grid{
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:15px;
-}
-
-.story-grid img{
-height:550px;
-object-fit:cover;
-}
-
-.story-text{
-text-align:center;
-max-width:800px;
-margin:40px auto;
-}
-
-.instagram{
-display:grid;
-grid-template-columns:repeat(6,1fr);
-gap:10px;
-}
-
-.instagram img{
-height:180px;
-object-fit:cover;
-}
-
-.news{
-margin:60px 0;
-}
-
-.news ul{
-list-style:none;
-border:1px solid #ddd;
-}
-
-.news li{
-padding:15px;
-border-bottom:1px solid #eee;
-}
-
-footer{
-background:#082b5c;
-color:white;
-padding:50px 20px;
-text-align:center;
-margin-top:50px;
-}
-
-@media(max-width:900px){
-
-.hero-grid,
-.story-grid{
-grid-template-columns:1fr;
-}
-
-.category-grid{
-grid-template-columns:1fr;
-}
-
-.instagram{
-grid-template-columns:repeat(2,1fr);
-}
-
-.hero-card img{
-height:400px;
-}
-
-.category-card img{
-height:350px;
-}
+.mobile-menu.open {
+transform: translateX(0);
 }
 </style>
-
 </head>
-
-<body>
-
-<header>
-<div class="container nav">
-<div class="logo">JAPAN FASHION HUB</div>
-
-<div class="menu">
-<a href="#">Home</a>
-<a href="#">Men</a>
-<a href="#">Women</a>
-<a href="#">New Arrivals</a>
-<a href="#">Ranking</a>
+<body class="bg-white text-gray-900 font-inter">
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center">
+<span class="text-2xl font-pacifico text-primary">ザ・ガーデン・カルチャー</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium">ホーム</a>
+<a href="#guides" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium">植物ガイド</a>
+<a href="#blog" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium">ブログ</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium">私たちについて</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium">お問い合わせ</a>
+<button id="get-started-btn" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap">
+購読する
+</button>
+</div>
+<div class="md:hidden">
+<button id="mobile-menu-btn" class="w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
 </div>
 </div>
-
-</header>
-
-<section class="hero container">
-<div class="hero-grid">
-
-<div class="hero-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=900">
-<div class="hero-text">Latest Collection</div>
 </div>
-
-<div class="hero-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900">
-<div class="hero-text">Style</div>
+<div id="mobile-menu" class="mobile-menu md:hidden fixed top-0 left-0 w-full h-full bg-white z-40">
+<div class="flex flex-col p-6 space-y-6">
+<div class="flex justify-between items-center">
+<span class="text-xl font-pacifico text-primary">ザ・ガーデン・カルチャー</span>
+<button id="mobile-menu-close" class="w-6 h-6 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
 </div>
-
-<div class="hero-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900">
-<div class="hero-text">Accessories</div>
+<a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg">ホーム</a>
+<a href="#guides" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg">植物ガイド</a>
+<a href="#blog" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg">ブログ</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg">私たちについて</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg">お問い合わせ</a>
+<button id="get-started-mobile-btn" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap w-full">
+購読する
+</button>
 </div>
-
+</div>
+</nav>
+<section id="home" class="hero-bg min-h-screen flex items-center relative">
+<div class="absolute inset-0 bg-black bg-opacity-20"></div>
+<div class="relative z-10 w-full">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-2xl">
+<h1 class="text-5xl md:text-6xl font-bold text-white mb-6 fade-in">
+あなたの植物の楽園への
+<span class="text-secondary">ガイド</span>
+</h1>
+<p class="text-xl text-white mb-8 fade-in">
+専門家による植物ケアのヒント、包括的な栽培ガイド、そして室内外の空間を緑で満たすためのインスピレーションをお届けします。
+</p>
+<div class="flex flex-col sm:flex-row gap-4 fade-in">
+<button id="explore-guides-btn" class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap font-semibold">
+植物ガイドを見る
+</button>
+<button id="learn-more-btn" class="border-2 border-white text-white px-8 py-4 !rounded-button hover:bg-white hover:text-primary transition-all duration-200 whitespace-nowrap font-semibold">
+もっと詳しく
+</button>
+</div>
+</div>
+</div>
 </div>
 </section>
-
-<div class="container">
-
-<div class="category-grid">
-
-<div class="category-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=1200">
-<div class="category-name">MEN</div>
-</div>
-
-<div class="category-card">
-<img loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200">
-<div class="category-name">WOMEN</div>
-</div>
-
-</div>
-
-<h2 class="section-title">New Arrivals</h2>
-
-<div class="products">
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600">
-<h3>Premium Polo Shirt</h3>
-<div class="price">¥4,980</div>
-</div>
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600">
-<h3>Summer Shirt</h3>
-<div class="price">¥5,980</div>
-</div>
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600">
-<h3>Women's Top</h3>
-<div class="price">¥3,980</div>
-</div>
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600">
-<h3>Fashion Dress</h3>
-<div class="price">¥6,980</div>
-</div>
-
-</div>
-
-<h2 class="section-title">Popular Ranking</h2>
-
-<div class="products">
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600">
-<h3>Popular Polo Shirt</h3>
-<div class="price">¥4,500</div>
-</div>
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600">
-<h3>Casual Wear</h3>
-<div class="price">¥5,200</div>
-</div>
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600">
-<h3>Women's Fashion</h3>
-<div class="price">¥4,980</div>
-</div>
-
-<div class="product">
-<img loading="lazy" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600">
-<h3>Sportswear</h3>
-<div class="price">¥6,200</div>
-</div>
-
-</div>
-
-</div>
-
-<section class="story container">
-
-<div class="story-grid">
-
-<img loading="lazy" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900">
-<img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900">
-<img loading="lazy" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900">
-
-</div>
-
-<div class="story-text">
-<h2 class="section-title">Sport Meets Fashion</h2>
-
-<p>
-Japan Fashion Hub offers a new lifestyle that combines Japanese trend fashion with sports style.
-We deliver items that focus on quality, comfort, and design.
+<section class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">なぜガーデン・カルチャー・ブログが信頼されるのか？</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+私たちは、あらゆるレベルの植物愛好家がガーデニングの旅で成功できるよう、専門知識と実践的な知恵を共有することに情熱を注いでいます。
 </p>
 </div>
-
-</section>
-
-<div class="container">
-
-<h2 class="section-title">Instagram Feed</h2>
-
-<div class="instagram">
-
-<img loading="lazy" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500">
-<img loading="lazy" src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500">
-<img loading="lazy" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500">
-<img loading="lazy" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500">
-<img loading="lazy" src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500">
-<img loading="lazy" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500">
-
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl shadow-lg hover-scale fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-book-open-line text-2xl text-primary"></i>
 </div>
-
-<div class="news">
-
-<h2 class="section-title">News</h2>
-
-<ul>
-<li>2026/06/15 Summer Collection Released</li>
-<li>2026/06/12 Men's Ranking Updated</li>
-<li>2026/06/10 Free Shipping Campaign Started</li>
-<li>2026/06/08 New Member Registration Bonus</li>
+<h3 class="text-2xl font-semibold mb-4 text-gray-900">包括的なガイド</h3>
+<p class="text-gray-600">
+基本的な水やりのテクニックから高度な繁殖方法まで、初心者にも専門家にも対応した詳細な植物ケアガイド。
+</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg hover-scale fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full mb-6">
+<i class="ri-lightbulb-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-2xl font-semibold mb-4 text-gray-900">専門家のヒントとコツ</h3>
+<p class="text-gray-600">
+園芸の専門家による科学的根拠に基づくアドバイスと実績のあるテクニックで、問題を解決し植物の健康を自然に最適化します。
+</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-lg hover-scale fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-6">
+<i class="ri-community-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-2xl font-semibold mb-4 text-gray-900">成長するコミュニティ</h3>
+<p class="text-gray-600">
+経験を共有し、質問し、ガーデニングの旅での成功を祝う、情熱的な植物愛好家のコミュニティに参加しましょう。
+</p>
+</div>
+</div>
+</div>
+</section>
+<section id="guides" class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">人気の植物ガイド</h2>
+<p class="text-xl text-gray-600">
+お気に入りの観葉植物のための包括的なケアガイド
+</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=beautiful%20monstera%20deliciosa%20plant%20in%20modern%20white%20ceramic%20pot%20on%20wooden%20table%2C%20bright%20natural%20lighting%2C%20minimalist%20home%20decor%2C%20indoor%20plant%20photography&amp;width=400&amp;height=300&amp;seq=prod001&amp;orientation=squarish')"></div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">モンステラ・デリシオサのケア</h3>
+<p class="text-gray-600 mb-4">この美しいシンボルプラントを育てるための完全ガイド</p>
+<div class="flex justify-between items-center">
+<span class="text-sm text-green-600 font-semibold">初心者向け</span>
+<button class="guide-read-btn bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap" data-guide="モンステラ・デリシオサのケア">
+ガイドを読む
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=snake%20plant%20sansevieria%20in%20elegant%20grey%20ceramic%20pot%2C%20modern%20minimalist%20style%2C%20clean%20white%20background%2C%20professional%20product%20photography&amp;width=400&amp;height=300&amp;seq=prod002&amp;orientation=squarish')"></div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">サンスベリアのマスター</h3>
+<p class="text-gray-600 mb-4">忙しい植物愛好家のための低メンテナンスケア</p>
+<div class="flex justify-between items-center">
+<span class="text-sm text-blue-600 font-semibold">とても簡単</span>
+<button class="guide-read-btn bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap" data-guide="サンスベリアのマスター">
+ガイドを読む
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=hands%20gently%20caring%20for%20small%20seedlings%20in%20terracotta%20pots%2C%20organic%20gardening%20setup%2C%20natural%20wooden%20background%2C%20sustainable%20growing%20practices&amp;width=400&amp;height=300&amp;seq=prod003&amp;orientation=squarish')"></div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-3">繁殖の秘密</h3>
+<p class="text-gray-600 mb-4">挿し木から新しい植物を育てる技術をマスターする</p>
+<div class="flex justify-between items-center">
+<span class="text-sm text-orange-600 font-semibold">中級者向け</span>
+<button class="guide-read-btn bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap" data-guide="繁殖の秘密">
+ガイドを読む
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=collection%20of%20organic%20herb%20seedlings%20growing%20in%20small%20pots%20on%20sunny%20windowsill%2C%20fresh%20green%20basil%20mint%20parsley%2C%20kitchen%20garden%20setup&amp;width=400&amp;height=300&amp;seq=prod004&amp;orientation=squarish')"></div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">ハーブガーデンの基本</h3>
+<p class="text-gray-600 mb-4">一年中室内で新鮮な料理用ハーブを育てる</p>
+<div class="flex justify-between items-center">
+<span class="text-sm text-green-600 font-semibold">クイックスタート</span>
+<button class="guide-read-btn bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap" data-guide="ハーブガーデンの基本">
+ガイドを読む
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12 fade-in">
+<button id="view-all-guides-btn" class="bg-secondary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap font-semibold">
+すべてのガイドを見る
+</button>
+</div>
+</div>
+</section>
+<section id="blog" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">最新の植物ストーリー</h2>
+<p class="text-xl text-gray-600">
+コミュニティからの新鮮な洞察、季節のヒント、インスピレーションを与える植物の旅
+</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<article class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=person%20caring%20for%20indoor%20plants%20with%20watering%20can%2C%20gentle%20morning%20light%2C%20peaceful%20home%20atmosphere%2C%20plant%20care%20routine%20photography&amp;width=400&amp;height=300&amp;seq=blog001&amp;orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-semibold mb-2">植物ケア</div>
+<h3 class="text-xl font-semibold mb-3">室内植物の水やり完全ガイド</h3>
+<p class="text-gray-600 mb-4">
+土壌の水分を理解することから季節ごとの調整まで、一年中植物を元気に保つ必須の水やりテクニックを学びましょう。
+</p>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-500">2024年3月15日</span>
+<button class="blog-read-more text-primary hover:text-secondary transition-colors duration-200 font-semibold" data-title="室内植物の水やり完全ガイド">
+続きを読む →
+</button>
+</div>
+</div>
+</article>
+<article class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=beautiful%20small%20apartment%20balcony%20garden%20with%20herbs%20and%20flowers%2C%20urban%20gardening%20setup%2C%20creative%20space%20utilization%2C%20cozy%20outdoor%20living&amp;width=400&amp;height=300&amp;seq=blog002&amp;orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-sm text-secondary font-semibold mb-2">小さなスペース</div>
+<h3 class="text-xl font-semibold mb-3">小さなアパートで緑豊かな庭を作る</h3>
+<p class="text-gray-600 mb-4">
+創造的な垂直ガーデン、コンパクトなプランター、都市生活者のためのスペース節約テクニックで限られた空間を最大限に活用しましょう。
+</p>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-500">2024年3月12日</span>
+<button class="blog-read-more text-primary hover:text-secondary transition-colors duration-200 font-semibold" data-title="小さなアパートで緑豊かな庭を作る">
+続きを読む →
+</button>
+</div>
+</div>
+</article>
+<article class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=selection%20of%20air%20purifying%20plants%20including%20peace%20lily%20spider%20plant%20and%20rubber%20tree%20in%20modern%20home%20interior%2C%20clean%20air%20natural%20health&amp;width=400&amp;height=300&amp;seq=blog003&amp;orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-sm text-primary font-semibold mb-2">健康とウェルネス</div>
+<h3 class="text-xl font-semibold mb-3">室内空気を浄化するトップ10の植物</h3>
+<p class="text-gray-600 mb-4">
+科学的に証明された、室内の空気を自然に浄化しながら、生活空間に美しさと静けさを加える植物を発見しましょう。
+</p>
+<div class="flex justify-between items-center">
+<span class="text-sm text-gray-500">2024年3月10日</span>
+<button class="blog-read-more text-primary hover:text-secondary transition-colors duration-200 font-semibold" data-title="室内空気を浄化するトップ10の植物">
+続きを読む →
+</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section id="about" class="py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="fade-in">
+<h2 class="text-4xl font-bold text-gray-900 mb-6">私たちの使命</h2>
+<p class="text-lg text-gray-600 mb-6">
+2020年に設立されたザ・ガーデン・カルチャー・ブログは、経験レベルや住空間に関係なく、誰もが植物の知識にアクセスできるようにするための情熱的なプロジェクトとして始まりました。植物を通じて自然とつながる喜びとウェルネスの恩恵を、誰もが体験する価値があると信じています。
+</p>
+<p class="text-lg text-gray-600 mb-6">
+私たちの使命は、包括的な植物ケアの知恵、持続可能なガーデニングの実践、そして人々が自分自身の緑豊かな空間を作り出す力を与えるインスピレーションを与えるストーリーを共有することです。低メンテナンスの植物アドバイスを求める忙しいプロフェッショナルから、新しいテクニックを探求する経験豊富なガーデナーまで、植物の旅のあらゆるステップをガイドします。
+</p>
+<div class="flex items-center space-x-6">
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">50K+</div>
+<div class="text-sm text-gray-600">月間読者数</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">200+</div>
+<div class="text-sm text-gray-600">植物ガイド</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold text-primary">95%</div>
+<div class="text-sm text-gray-600">成功率</div>
+</div>
+</div>
+</div>
+<div class="fade-in">
+<div class="h-96 bg-cover bg-center rounded-xl" style="background-image: url('https://readdy.ai/api/search-image?query=friendly%20plant%20expert%20in%20greenhouse%20surrounded%20by%20lush%20tropical%20plants%2C%20warm%20natural%20lighting%2C%20professional%20botanical%20environment%2C%20caring%20for%20plants%20with%20passion&amp;width=600&amp;height=400&amp;seq=about001&amp;orientation=landscape')"></div>
+</div>
+</div>
+</div>
+</section>
+<section id="newsletter" class="py-20 bg-primary">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="fade-in">
+<h2 class="text-4xl font-bold text-white mb-4">植物の知識を深める準備はできましたか？</h2>
+<p class="text-xl text-white mb-8 max-w-2xl mx-auto">
+専門家のアドバイスを求めてザ・ガーデン・カルチャー・ブログを信頼する何千人もの植物愛好家に参加しましょう。毎週の植物ケアのヒント、季節のガイド、限定コンテンツをあなたの受信箱にお届けします。
+</p>
+<form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" data-readdy-form="newsletter">
+<input type="email" id="newsletter-email" name="email" required placeholder="メールアドレスを入力" class="flex-1 px-6 py-4 rounded-button border-none text-gray-900 placeholder-gray-500 text-sm">
+<button type="submit" id="newsletter-subscribe" class="bg-secondary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap font-semibold">
+購読する
+</button>
+</form>
+</div>
+</div>
+</section>
+<section id="contact" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">お問い合わせ</h2>
+<p class="text-xl text-gray-600">
+植物ケアについて質問がありますか？パーソナライズされたアドバイスが必要ですか？お手伝いします！
+</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-16">
+<div class="fade-in">
+<div class="bg-white p-8 rounded-xl shadow-lg">
+<h3 class="text-2xl font-semibold mb-6 text-gray-900">植物の専門家に聞く</h3>
+<form id="contact-form" class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">名</label>
+<input type="text" name="firstName" required class="w-full px-4 py-3 border border-gray-300 rounded-button text-gray-900 placeholder-gray-500" placeholder="太郎">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">姓</label>
+<input type="text" name="lastName" required class="w-full px-4 py-3 border border-gray-300 rounded-button text-gray-900 placeholder-gray-500" placeholder="山田">
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">メールアドレス</label>
+<input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-button text-gray-900 placeholder-gray-500" placeholder="taro@example.com">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">植物の質問トピック</label>
+<input type="text" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-button text-gray-900 placeholder-gray-500" placeholder="植物の同定、ケアのヒント、害虫の問題...">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">あなたの質問</label>
+<textarea name="message" rows="6" required maxlength="500" class="w-full px-4 py-3 border border-gray-300 rounded-button text-gray-900 placeholder-gray-500" placeholder="植物の質問や課題について教えてください..."></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-8 py-4 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap font-semibold">
+質問を送信
+</button>
+</form>
+</div>
+</div>
+<div class="fade-in">
+<div class="space-y-8">
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+<i class="ri-map-pin-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">所在地</h4>
+<p class="text-gray-600">
+103 W Main St<br>
+Carrboro, North Carolina 27510
+</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-10 rounded-full">
+<i class="ri-phone-line text-xl text-secondary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">お電話</h4>
+<p class="text-gray-600">(919) 967-6985</p>
+<p class="text-sm text-gray-500">月〜金 9:00〜18:00 EST</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+<i class="ri-mail-line text-xl text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-2">メールサポート</h4>
+<p class="text-gray-600">support@thegardenculture.online</p>
+<p class="text-sm text-gray-500">24時間以内に返信します</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<h4 class="font-semibold text-gray-900 mb-4">専門家の回答時間</h4>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between">
+<span class="text-gray-600">植物ケアの質問</span>
+<span class="text-gray-900">24時間以内</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600">緊急の問題</span>
+<span class="text-gray-900">当日中</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600">一般的なお問い合わせ</span>
+<span class="text-gray-900">1〜2営業日</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<div class="mb-6">
+<span class="text-2xl font-pacifico text-secondary">ザ・ガーデン・カルチャー</span>
+</div>
+<p class="text-gray-400 mb-6">
+植物ケアの知恵、持続可能なガーデニングの実践、そして自宅で緑豊かな空間を作るための専門家のガイダンスを提供する信頼できる情報源です。
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-200">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-200">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-200">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors duration-200">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-6">クイックリンク</h4>
+<ul class="space-y-3">
+<li><a href="#home" class="nav-link text-gray-400 hover:text-white transition-colors duration-200">ホーム</a></li>
+<li><a href="#guides" class="nav-link text-gray-400 hover:text-white transition-colors duration-200">植物ガイド</a></li>
+<li><a href="#blog" class="nav-link text-gray-400 hover:text-white transition-colors duration-200">ブログ</a></li>
+<li><a href="#about" class="nav-link text-gray-400 hover:text-white transition-colors duration-200">私たちについて</a></li>
+<li><a href="#contact" class="nav-link text-gray-400 hover:text-white transition-colors duration-200">お問い合わせ</a></li>
+<li><a href="#plant-care" class="text-gray-400 hover:text-white transition-colors duration-200">植物ケアガイド</a></li>
 </ul>
-
 </div>
-
+<div>
+<h4 class="font-semibold mb-6">カスタマーサービス</h4>
+<ul class="space-y-3">
+<li><a href="#newsletter" class="text-gray-400 hover:text-white transition-colors duration-200">ニュースレター</a></li>
+<li><a href="#archives" class="text-gray-400 hover:text-white transition-colors duration-200">記事アーカイブ</a></li>
+<li><a href="#categories" class="text-gray-400 hover:text-white transition-colors duration-200">植物カテゴリー</a></li>
+<li><a href="#faq" class="text-gray-400 hover:text-white transition-colors duration-200">よくある質問</a></li>
+<li><a href="#resources" class="text-gray-400 hover:text-white transition-colors duration-200">無料リソース</a></li>
+<li><a href="#support" class="text-gray-400 hover:text-white transition-colors duration-200">ヘルプセンター</a></li>
+</ul>
 </div>
-
-<footer>
-
-<h3>JAPAN FASHION HUB</h3>
-
-<p>
-Delivering the latest fashion across Japan.
-</p>
-
-<p style="margin-top:15px;">
-© 2026 Japan Fashion Hub. All Rights Reserved.
-</p>
-
+<div>
+<h4 class="font-semibold mb-6">法的情報</h4>
+<ul class="space-y-3">
+<li><a href="#privacy" class="text-gray-400 hover:text-white transition-colors duration-200">プライバシーポリシー</a></li>
+<li><a href="#terms" class="text-gray-400 hover:text-white transition-colors duration-200">利用規約</a></li>
+<li><a href="#disclaimer" class="text-gray-400 hover:text-white transition-colors duration-200">免責事項</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-200">お問い合わせ</a></li>
+</ul>
+<div class="mt-8">
+<h4 class="font-semibold mb-4">連絡先</h4>
+<div class="space-y-2 text-sm text-gray-400">
+<p>103 W Main St, Carrboro, NC 27510</p>
+<p>(919) 967-6985</p>
+<p>support@thegardenculture.online</p>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>&copy; 2024 ザ・ガーデン・カルチャー. All rights reserved. 世界中の植物愛好家のために心を込めてデザインされました。</p>
+</div>
+</div>
 </footer>
+<div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="bg-white rounded-xl max-w-md w-full p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-semibold text-gray-900">カートに追加しました</h3>
+<button class="cart-close w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div id="cart-content" class="mb-6">
+<div class="flex items-center space-x-4">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-lg">
+<i class="ri-plant-line text-2xl text-primary"></i>
+</div>
+<div>
+<h4 id="cart-product-name" class="font-semibold text-gray-900"></h4>
+<p id="cart-product-price" class="text-primary font-bold"></p>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="cart-close flex-1 bg-gray-200 text-gray-800 px-4 py-3 !rounded-button hover:bg-gray-300 transition-all duration-200 whitespace-nowrap">
+買い物を続ける
+</button>
+<button class="flex-1 bg-primary text-white px-4 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap">
+カートを見る
+</button>
+</div>
+</div>
+</div>
+</div>
+<div id="blog-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="bg-white rounded-xl max-w-2xl max-h-[90vh] overflow-y-auto p-8">
+<div class="flex justify-between items-center mb-6">
+<h2 id="blog-modal-title" class="text-2xl font-bold text-gray-900"></h2>
+<button class="blog-close w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div id="blog-modal-content" class="prose max-w-none text-gray-600">
+<p>これはブログ記事のプレビューです。完全な実装では、適切なフォーマット、画像、インタラクティブな要素を含む完全な記事コンテンツが含まれます。</p>
+<p>私たちのブログでは、植物ケア、ガーデニングのヒント、季節のアドバイス、植物の旅で成功するための専門家の洞察に関する包括的なガイドを提供しています。</p>
+</div>
+</div>
+</div>
+</div>
+<div id="info-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="bg-white rounded-xl max-w-lg w-full p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 id="info-modal-title" class="text-xl font-semibold text-gray-900"></h3>
+<button class="info-close w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div id="info-modal-content" class="text-gray-600 space-y-3">
+</div>
+<div class="mt-6">
+<button class="info-close w-full bg-primary text-white px-4 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-200 whitespace-nowrap">
+了解しました
+</button>
+</div>
+</div>
+</div>
+</div>
+<div id="success-notification" class="fixed top-4 right-4 z-50 hidden">
+<div class="bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-3">
+<i class="ri-check-line text-xl"></i>
+<span id="success-message"></span>
+</div>
+</div>
+<div id="privacy" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="bg-white rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto p-8">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-3xl font-bold text-gray-900">プライバシーポリシー</h2>
+<button class="privacy-close w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div class="prose max-w-none text-gray-600 space-y-4">
+<p><strong>発効日:</strong> 2024年1月1日</p>
+<p><strong>最終更新:</strong> 2024年1月1日</p>
+<p><strong>バージョン:</strong> 4.0 - Googleポリシーコンプライアンス強化版</p>
+<h3 class="text-xl font-semibold text-gray-900">1. はじめにと適用範囲</h3>
+<p>ザ・ガーデン・カルチャー LLC（以下「当社」）は、お客様のプライバシーを保護し、適用されるすべてのプライバシー法およびプラットフォームポリシーを厳格に遵守することに尽力しています。このプライバシーポリシーは、Google広告ポリシー、Googleビジネスプロフィールポリシー、カリフォルニア州消費者プライバシー法（CCPA）、一般データ保護規則（GDPR）、および適用されるすべての連邦および州のプライバシー規制の要件を満たすように特別に設計されています。</p>
+<p><strong>当社のコミットメント:</strong> 当社は、すべての事業慣行において透明性、ユーザーコントロール、データ保護を優先します。このポリシーは、お客様が当社のウェブサイトを訪問し、ニュースレターを購読し、植物ケアのアドバイスを求め、または当社の教育コンテンツやサービスとやり取りする際に、お客様の個人情報をどのように収集、使用、共有、保護するかを正確に説明しています。</p>
+<h3 class="text-xl font-semibold text-gray-900">2. 収集する情報</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.1 お客様が提供する個人情報</h4>
+<p>当社は、お客様が自発的に提供する情報を収集します。これには以下が含まれます：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>連絡先情報：氏名、メールアドレス、電話番号、郵送先住所</li>
+<li>アカウント情報：ユーザー名、パスワード、設定</li>
+<li>コミュニケーションデータ：メッセージ、フィードバック、アンケート回答、サポート問い合わせ</li>
+<li>ニュースレター購読データ：メール設定、興味・関心</li>
+<li>ユーザー生成コンテンツ：レビュー、コメント、当社と共有された写真</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.2 自動的に収集される情報</h4>
+<p>お客様が当社のウェブサイトを訪問すると、当社は自動的に以下を収集します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>デバイス情報：IPアドレス、ブラウザの種類、オペレーティングシステム、デバイス識別子</li>
+<li>使用データ：閲覧ページ、滞在時間、クリックパターン、検索クエリ</li>
+<li>位置データ：IPアドレスに基づく一般的な地理的位置</li>
+<li>参照情報：ウェブサイト訪問のソース、参照元URL</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.3 第三者からの情報</h4>
+<p>当社は、ソーシャルメディアプラットフォーム、分析プロバイダー、広告パートナーなどの第三者から、その利用規約とお客様のプライバシー設定に従って、お客様に関する情報を受け取る場合があります。</p>
+<h3 class="text-xl font-semibold text-gray-900">3. 情報の使用方法</h3>
+<p>当社は、以下の正当な事業目的のために個人情報を使用します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>サービスの提供と改善、ウェブサイトの機能性、ユーザーエクスペリエンス</li>
+<li>ニュースレター購読の処理と要求されたコンテンツの送信</li>
+<li>問い合わせへの対応、カスタマーサポートの提供、トラブルシューティング</li>
+<li>サービスに関する管理上の連絡の送信</li>
+<li>コンテンツとサービスを改善するための調査と分析の実施</li>
+<li>エクスペリエンスのパーソナライズと関連コンテンツの推奨</li>
+<li>詐欺、セキュリティ問題、技術的問題の検出、防止、対処</li>
+<li>法的義務の遵守と法的権利の保護</li>
+<li>マーケティングコミュニケーション（法律で必要な場合は明示的な同意を得た場合のみ）</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">4. 処理の法的根拠（GDPR）</h3>
+<p>欧州経済領域のユーザーの場合、当社の処理の法的根拠は以下を含みます：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>同意：特定の目的のために明示的に同意した場合</li>
+<li>契約の履行：お客様が要求したサービスを提供するため</li>
+<li>正当な利益：事業運営、セキュリティ、改善のため</li>
+<li>法的遵守：規制および法的要件を満たすため</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">5. 情報の共有と開示</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">5.1 個人情報の販売禁止</h4>
+<p><strong>厳格な販売禁止ポリシー：</strong> 当社は、金銭的またはその他の対価のために、お客様の個人情報を第三者に販売、賃貸、リース、または取引することはありません。このポリシーは、収集元や収集方法に関係なく、当社が収集するすべての個人情報に適用されます。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">5.2 限定的な許可共有</h4>
+<p>当社は、適切な保護措置を講じた上で、以下の厳格に限られた状況でのみお客様の情報を共有する場合があります：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li><strong>サービスプロバイダー：</strong> 厳格な契約上のデータ保護要件の下で、重要な事業機能（ウェブサイトホスティング、メール配信、安全な決済処理、カスタマーサポート）を支援する慎重に審査された第三者</li>
+<li><strong>法的遵守：</strong> 有効な法的プロセス、裁判所命令、政府の要求によって要求された場合、または適用される法律や規制を遵守するため</li>
+<li><strong>安全とセキュリティ：</strong> 詐欺、虐待、違法行為から当社の事業、ユーザー、または公衆の権利、財産、安全、セキュリティを保護するため</li>
+<li><strong>事業譲渡：</strong> 合併、買収、資産売却に関連して、事前通知と継続的なプライバシー保護を伴う場合</li>
+<li><strong>明示的な同意：</strong> お客様が共有について明確、具体的、かつ情報に基づいた同意を提供した場合のみ</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">5.3 第三者サービスプロバイダー基準</h4>
+<p>すべてのサービスプロバイダーは、以下を含む当社の厳格な基準を満たす必要があります：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>プライバシーとセキュリティ要件を含むデータ処理契約の締結</li>
+<li>適用されるプライバシー法およびGoogleのパートナーポリシーの遵守</li>
+<li>指定された事業目的のみへのデータ使用の制限</li>
+<li>適切な技術的および組織的保護措置の実施</li>
+<li>定期的なセキュリティ監査とコンプライアンス監視</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">6. Cookieとトラッキング技術</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">6.1 使用するCookieの種類</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li><strong>必須Cookie：</strong> ウェブサイトの機能とセキュリティに必要</li>
+<li><strong>分析Cookie：</strong> ウェブサイトの使用状況とパフォーマンスの理解に役立つ</li>
+<li><strong>機能Cookie：</strong> お客様の設定と好みを記憶</li>
+<li><strong>広告Cookie：</strong> 関連広告の配信に使用（同意を得た場合）</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">6.2 Cookieの管理</h4>
+<p>ブラウザの設定でCookieを制御できます。特定のCookieを無効にすると、ウェブサイトの機能に影響を与える可能性があることに注意してください。当社はDo Not Trackシグナルとブラウザのプライバシー設定を尊重します。</p>
+<h3 class="text-xl font-semibold text-gray-900">7. Googleサービス統合とコンプライアンス</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">7.1 使用するGoogleサービス</h4>
+<p>当社は、Googleのプライバシーおよび広告ポリシーを完全に遵守して、特定のGoogleサービスと統合しています：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li><strong>Google Analytics：</strong> 匿名のウェブサイトパフォーマンス指標、ユーザー行動分析、サービス改善のため（IP匿名化を有効化）</li>
+<li><strong>Google広告（該当する場合）：</strong> ユーザーの好みを尊重し、すべてのGoogle広告ポリシーを遵守する、関連性が高く非侵入的な広告のため</li>
+<li><strong>Google Fonts：</strong> ウェブサイトのタイポグラフィとユーザーエクスペリエンスの向上のため</li>
+<li><strong>Googleビジネスプロフィール：</strong> Googleビジネスポリシーに準拠した正確な事業情報と顧客レビューのため</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">7.2 Google広告ポリシーコンプライアンス</h4>
+<p>当社の広告慣行は、以下を含むGoogle広告ポリシーを厳格に遵守しています：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>誤解を招く主張のない、真実で正確な広告コンテンツ</li>
+<li>ユーザーのプライバシーとデータ保護要件の尊重</li>
+<li>正当な利益とユーザーの同意に基づく適切なターゲティング</li>
+<li>制限コンテンツポリシーと業界ガイドラインの遵守</li>
+<li>広告関係とスポンサーコンテンツの透明な開示</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">7.3 ユーザーコントロールとオプトアウトオプション</h4>
+<p>お客様はGoogle関連のデータ収集を完全に制御できます：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>Googleアカウント設定でGoogle広告の設定を管理</li>
+<li>Googleの広告設定でパーソナライズ広告をオプトアウト</li>
+<li>Google Analyticsオプトアウトブラウザアドオンを使用して分析トラッキングを防止</li>
+<li>ブラウザ設定でCookieとトラッキングをブロックまたは管理</li>
+<li>Googleのプライバシーツールと透明性レポートにアクセスして追加の制御を行う</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">8. データセキュリティと保護</h3>
+<p>当社は以下を含む包括的なセキュリティ対策を実施しています：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>データ送信のためのSSL暗号化</li>
+<li>安全なサーバーインフラストラクチャとアクセス制御</li>
+<li>定期的なセキュリティ監査と脆弱性評価</li>
+<li>データ保護慣行に関する従業員トレーニング</li>
+<li>潜在的な侵害に対するインシデント対応手順</li>
+</ul>
+<p>当社は業界標準のセキュリティ対策を使用していますが、完全に安全なシステムはありません。お客様の情報の絶対的なセキュリティを保証することはできません。</p>
+<h3 class="text-xl font-semibold text-gray-900">9. データ保持</h3>
+<p>当社は、このポリシーに概説された目的、または法律で要求される限り、お客様の個人情報を保持します。保持期間は以下に基づいて異なります：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>情報の種類とその使用方法</li>
+<li>法的および規制上の要件</li>
+<li>事業運営上のニーズ</li>
+<li>お客様と当社のサービスとの関係</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">10. お客様のプライバシー権とコントロール</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.1 普遍的なプライバシー権</h4>
+<p>お客様の所在地に関係なく、当社はすべてのユーザーに以下の基本的なプライバシー権を提供します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li><strong>アクセス権：</strong> 当社が収集したすべての個人情報のコピーを要求および受領する</li>
+<li><strong>訂正権：</strong> 不正確または不完全な個人情報を更新、訂正、または完全にする</li>
+<li><strong>コミュニケーションコントロール：</strong> 必須のサービス通知を維持しながら、マーケティングコミュニケーションから簡単に配信停止する</li>
+<li><strong>削除権：</strong> アカウントと関連する個人データの完全な削除を要求する（法的保持要件を条件とする）</li>
+<li><strong>透明性の権利：</strong> 当社のデータ慣行とお客様の情報の使用方法について明確な説明を受ける</li>
+<li><strong>異議申し立て権：</strong> マーケティングまたはその他の非必須目的のための個人情報の処理に異議を唱える</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.2 CCPAの権利（カリフォルニア州居住者）</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>当社が収集する個人情報とその使用方法を知る権利</li>
+<li>個人情報を削除する権利（例外あり）</li>
+<li>販売をオプトアウトする権利（ただし当社は個人情報を販売していません）</li>
+<li>プライバシー権の行使に対する非差別の権利</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.3 GDPRの権利（EU居住者）</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>データポータビリティの権利</li>
+<li>処理を制限する権利</li>
+<li>処理に異議を唱える権利</li>
+<li>同意を撤回する権利</li>
+<li>監督当局に苦情を申し立てる権利</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">11. 国際的なデータ転送</h3>
+<p>当社は主に米国内でデータを処理します。データを国際的に転送する場合、以下を含む適切な保護措置が講じられていることを確認します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>関連当局による十分性決定</li>
+<li>標準契約条項</li>
+<li>認証スキームと行動規範</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">12. 子供のプライバシー</h3>
+<p>当社のサービスは13歳未満の子供を対象としていません。当社は13歳未満の子供から個人情報を故意に収集しません。そのような情報を収集したことに気付いた場合、速やかに削除します。子供から情報を収集した可能性があると思われる親または保護者は、直ちに当社に連絡してください。</p>
+<h3 class="text-xl font-semibold text-gray-900">13. 第三者のリンクとサービス</h3>
+<p>当社のウェブサイトには、第三者のウェブサイト、サービス、またはアプリケーションへのリンクが含まれる場合があります。このプライバシーポリシーは、これらの外部サイトには適用されません。訪問または使用する第三者のサービスのプライバシーポリシーを確認することをお勧めします。</p>
+<h3 class="text-xl font-semibold text-gray-900">14. このプライバシーポリシーの変更</h3>
+<p>当社は、慣行、サービス、または法的要件の変更を反映するために、このプライバシーポリシーを定期的に更新する場合があります。当社は：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>更新されたポリシーをウェブサイトに掲載します</li>
+<li>「最終更新」日を更新します</li>
+<li>重要な変更をメールまたはウェブサイトのお知らせでユーザーに通知します</li>
+<li>お客様の権利に重大な影響を与える変更について同意を取得します（必要な場合）</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">15. カリフォルニア州「シン・ザ・ライト」法</h3>
+<p>カリフォルニア州の居住者は、直接マーケティング目的で第三者に個人情報を開示するかどうかについての情報を要求できます。当社は直接マーケティング目的で第三者と個人情報を共有しないため、開示文書は不要です。</p>
+<h3 class="text-xl font-semibold text-gray-900">16. 連絡先情報とデータ保護責任者</h3>
+<p>プライバシーに関するお問い合わせ、権利の行使、懸念事項の報告については：</p>
+<div class="bg-gray-50 p-4 rounded-lg mt-4">
+<p><strong>メール：</strong> privacy@thegardenculture.online</p>
+<p><strong>電話：</strong> (919) 967-6985</p>
+<p><strong>郵送：</strong> The Garden Culture, Attn: Privacy Officer<br>103 W Main St<br>Carrboro, North Carolina 27510</p>
+<p><strong>回答時間：</strong> プライバシー要求には30日以内（または適用される法律で要求される場合）に回答します</p>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">17. 包括的なコンプライアンスフレームワーク</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">17.1 プラットフォームおよび広告ポリシーコンプライアンス</h4>
+<p>このプライバシーポリシーは、以下への厳格な遵守を保証します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li><strong>Google広告ポリシー：</strong> 禁止コンテンツ、制限慣行、編集ガイドライン、ユーザー安全要件を含む</li>
+<li><strong>Googleビジネスプロフィールポリシー：</strong> 正確な事業表現、顧客対応基準、レビュー管理のため</li>
+<li><strong>Google Analytics利用規約：</strong> 適切なデータ収集、処理、ユーザープライバシー保護のため</li>
+<li><strong>Google開発者ポリシー：</strong> 統合サービスとデータ処理慣行のため</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">17.2 法的および規制上のコンプライアンス</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li><strong>連邦法：</strong> FTC法、CAN-SPAM法、COPPA、電話消費者保護法（TCPA）</li>
+<li><strong>州法：</strong> カリフォルニア州消費者プライバシー法（CCPA）、バージニア州消費者データ保護法（VCDPA）、その他の州プライバシー法</li>
+<li><strong>国際規制：</strong> EU一般データ保護規則（GDPR）、英国データ保護法</li>
+<li><strong>業界標準：</strong> ベター・ビジネス・ビューロー基準、ダイレクト・マーケティング協会ガイドライン</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">17.3 継続的なコンプライアンス監視</h4>
+<p>当社は以下を通じてコンプライアンスを維持します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>変化する規制を反映するための四半期ごとのポリシーレビューと更新</li>
+<li>定期的なコンプライアンス監査と第三者評価</li>
+<li>Googleポリシーの更新と実装の継続的な監視</li>
+<li>プライバシー法とプラットフォームポリシー要件に関するスタッフトレーニング</li>
+<li>規制当局および業界団体との積極的な関与</li>
+</ul>
+<p class="mt-6 p-4 bg-blue-50 rounded-lg"><strong>コンプライアンスのコミットメント：</strong> このプライバシーポリシーは、最高水準のプライバシー保護、規制遵守、倫理的な事業慣行に対する当社の揺るぎないコミットメントを反映しています。当社は、すべての事業運営においてユーザーの信頼とプラットフォームポリシーの遵守を確保するため、最低限の法的要件を超えています。</p>
+</div>
+</div>
+</div>
+</div>
+<div id="terms" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="bg-white rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto p-8">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-3xl font-bold text-gray-900">利用規約</h2>
+<button class="terms-close w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div class="prose max-w-none text-gray-600 space-y-4">
+<p><strong>発効日:</strong> 2024年1月1日</p>
+<p><strong>最終更新:</strong> 2024年1月1日</p>
+<p><strong>バージョン:</strong> 2.0</p>
+<h3 class="text-xl font-semibold text-gray-900">1. 規約への同意</h3>
+<p>ザ・ガーデン・カルチャーのウェブサイト（thegardenculture.online）、モバイルアプリケーション、または関連サービス（以下総称して「サービス」）にアクセス、閲覧、または使用することにより、お客様は本利用規約（以下「規約」）を読み、理解し、これに拘束されることに同意したものとみなされます。本規約は、お客様とザ・ガーデン・カルチャー LLC（以下「当社」）との間の法的に拘束力のある契約を構成します。</p>
+<p>本規約に同意しない場合、当社のサービスにアクセスまたは使用してはなりません。本規約は、Google広告ポリシー、Googleビジネスポリシー、連邦取引委員会ガイドライン、および適用されるすべての消費者保護法を遵守しています。</p>
+<h3 class="text-xl font-semibold text-gray-900">2. 適格性とアカウント登録</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.1 年齢要件</h4>
+<p>当社のサービスを使用したり購入したりするには、18歳以上である必要があります。当社のサービスを使用することにより、お客様はこの年齢要件を満たし、本規約を締結する法的能力を有することを表明し、保証します。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.2 アカウント情報</h4>
+<p>アカウントを作成する場合、正確で最新かつ完全な情報を提供することに同意します。お客様は、アカウントの認証情報の機密性を維持し、アカウントの下で発生するすべての活動に対して責任を負います。</p>
+<h3 class="text-xl font-semibold text-gray-900">3. 製品とサービス</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">3.1 製品ラインナップ</h4>
+<p>当社は、教育コンテンツ、植物ケアガイド、ガーデニングのアドバイス、ニュースレター、および関連する情報サービスを提供しています。また、植物、園芸用具、種子、アクセサリーなどの物理的な製品を提供する場合もあります。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">3.2 製品の説明と入手可能性</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>すべての製品の説明、仕様、画像は情報提供を目的としています</li>
+<li>正確性を期していますが、説明に誤りがないことを保証することはできません</li>
+<li>製品の入手可能性、価格、仕様は予告なく変更される場合があります</li>
+<li>当社は数量の制限、注文の拒否、製品の販売中止を留保する権利を有します</li>
+<li>生きた植物は季節的な入手可能性と配送制限の対象となります</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">3.3 教育コンテンツの免責事項</h4>
+<p>当社の植物ケアのアドバイスとガーデニング情報は教育目的のみです。結果は、個々の状況、環境条件、ケアの実践によって異なる場合があります。具体的なアドバイスについては、地域の園芸専門家に相談することをお勧めします。</p>
+<h3 class="text-xl font-semibold text-gray-900">4. 注文、価格、支払い</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">4.1 注文プロセス</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>すべての注文は、承認と製品の入手可能性の対象となります</li>
+<li>当社は、独自の裁量で注文を拒否またはキャンセルする権利を留保します</li>
+<li>注文確認は、製品の入手可能性を保証するものではありません</li>
+<li>注文を処理するために追加情報をお客様に求める場合があります</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">4.2 価格と手数料</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>すべての価格は、特に記載がない限り米ドル（USD）です</li>
+<li>価格には、法律で要求される該当する売上税が含まれます</li>
+<li>配送料と手数料は別途、チェックアウト時に計算されます</li>
+<li>当社は、事前の通知なくいつでも価格を変更する権利を留保します</li>
+<li>価格の誤りは訂正され、変更について通知されます</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">4.3 支払い方法</h4>
+<p>当社は、チェックアウト時に表示される主要なクレジットカード、デビットカード、およびその他の支払い方法を受け付けます。注文処理の前に支払いを受け取る必要があります。すべての支払いは、第三者の決済処理業者を通じて安全に処理されます。</p>
+<h3 class="text-xl font-semibold text-gray-900">5. 配送、配達、危険負担</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">5.1 配送地域</h4>
+<p>当社は現在、米国内の住所に配送しています。国際配送は、特定の製品と目的地で利用可能な場合があります。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">5.2 配達条件</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>配達時間は推定であり、保証されたものではありません</li>
+<li>配送業者または不可抗力による遅延については責任を負いません</li>
+<li>生きた植物は、気象条件により季節的な配送制限がある場合があります</li>
+<li>生きた植物や壊れやすい物品には特別な取り扱いが必要な場合があります</li>
+<li>危険負担は、配送先住所への配達時にお客様に移転します</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">6. 返品、交換、保証</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">6.1 返品ポリシー</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>ほとんどの非生物製品は、配達後30日以内に返品できます</li>
+<li>商品は、すべての梱包と書類が揃った元の状態である必要があります</li>
+<li>カスタムまたはパーソナライズされた商品は返品できない場合があります</li>
+<li>返品送料は、商品に欠陥がある場合を除き、お客様の負担となります</li>
+<li>返金は、5〜10営業日以内に元の支払い方法に処理されます</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">6.2 生きた植物の保証</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>生きた植物は、健康で説明どおりに到着することが保証されています</li>
+<li>損傷または不健康な植物の請求は、配達後48時間以内に報告する必要があります</li>
+<li>植物の健康状態の請求には、写真による証拠が必要な場合があります</li>
+<li>正当な植物の健康問題に対しては、交換または返金が提供されます</li>
+<li>配達後および適切なケア指示後の植物の健康については責任を負いません</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">7. ユーザーの行動と禁止事項</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">7.1 許容される使用</h4>
+<p>お客様は、当社のサービスを合法的な目的のみに、本規約に従って使用することに同意します。当社のサービスを害し、混乱させ、または妨害する可能性のある活動に従事してはなりません。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">7.2 禁止行為</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>適用される法律または規制に違反すること</li>
+<li>知的財産権を侵害すること</li>
+<li>有害、攻撃的、または不適切なコンテンツを配布すること</li>
+<li>当社のシステムへの不正アクセスを試みること</li>
+<li>許可なく自動システムを使用して当社のサービスにアクセスすること</li>
+<li>詐欺行為に従事したり、情報を偽ること</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">8. 知的財産権</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">8.1 当社のコンテンツ</h4>
+<p>当社のサービス上のすべてのコンテンツ（テキスト、グラフィック、ロゴ、画像、ビデオ、ソフトウェア、デザイン要素を含む）は、ザ・ガーデン・カルチャーまたはそのライセンサーが所有し、米国および国際的な著作権、商標、その他の知的財産法によって保護されています。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">8.2 限定的なライセンス</h4>
+<p>当社は、お客様に個人的、非商業的目的で当社のサービスにアクセスし使用するための、限定的、非独占的、譲渡不能なライセンスを付与します。このライセンスには、ダウンロード、変更、配布、または派生作品を作成する権利は含まれません。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">8.3 ユーザーコンテンツ</h4>
+<p>当社のサービスにコンテンツ（レビュー、コメント、写真）を送信することにより、お客様は当社に、当社の事業運営に関連してそのようなコンテンツを使用、変更、表示するための、非独占的、ロイヤリティフリー、世界的なライセンスを付与します。</p>
+<h3 class="text-xl font-semibold text-gray-900">9. プライバシーとデータ保護</h3>
+<p>お客様のプライバシーは当社にとって重要です。当社のプライバシーポリシーは、お客様の情報をどのように収集、使用、保護するかを説明しています。当社のサービスを使用することにより、お客様は、本規約に参照により組み込まれるプライバシーポリシーに記載された当社のデータ慣行に同意するものとします。</p>
+<h3 class="text-xl font-semibold text-gray-900">10. 免責事項と保証</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.1 サービスの免責事項</h4>
+<p>当社のサービスは「現状有姿」および「提供可能な範囲」で提供され、明示または黙示を問わず、いかなる種類の保証もありません。当社は、商品性、特定目的への適合性、非侵害を含むがこれらに限定されないすべての保証を否認します。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.2 コンテンツの正確性</h4>
+<p>正確な情報を提供するよう努めていますが、当社のコンテンツが完全、正確、最新、または誤りがないことを保証するものではありません。植物ケアのアドバイスは一般的なものであり、すべての状況に適しているとは限りません。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.3 第三者サービス</h4>
+<p>当社は、第三者サービスと統合したり、第三者コンテンツを表示する場合があります。当社は、第三者サービスの可用性、正確性、コンテンツについて責任を負わず、第三者の製品やサービスを推奨するものではありません。</p>
+<h3 class="text-xl font-semibold text-gray-900">11. 責任の制限</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">11.1 損害の制限</h4>
+<p>法律で許容される最大限の範囲で、ザ・ガーデン・カルチャーは、お客様の当社サービスの使用から生じる、利益、データ、使用の損失を含むがこれらに限定されない、間接的、偶発的、特別、結果的、または懲罰的損害に対して責任を負いません。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">11.2 総責任の上限</h4>
+<p>本規約または当社のサービスから生じる、または関連するすべての請求に対する当社のお客様に対する総責任は、請求の前の12ヶ月間にお客様が当社に支払った金額、または100ドルのいずれか大きい方を超えないものとします。</p>
+<h3 class="text-xl font-semibold text-gray-900">12. 補償</h3>
+<p>お客様は、当社のサービスの使用、本規約の違反、または第三者の権利の侵害から生じる請求、責任、損害、損失、費用、または経費から、ザ・ガーデン・カルチャーとその役員、取締役、従業員、代理人を補償し、防御し、免責することに同意します。</p>
+<h3 class="text-xl font-semibold text-gray-900">13. 準拠法と紛争解決</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">13.1 準拠法</h4>
+<p>本規約は、抵触法の原則に関係なく、米国ノースカロライナ州の法律に準拠します。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">13.2 紛争解決</h4>
+<p>本規約または当社のサービスから生じる紛争は、米国仲裁協会の商事仲裁規則に従い、ノースカロライナ州で行われる拘束力のある仲裁によって解決されます。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">13.3 集団訴訟の放棄</h4>
+<p>お客様は、紛争を個別に解決することに同意し、集団訴訟または集団仲裁に参加する権利を放棄します。</p>
+<h3 class="text-xl font-semibold text-gray-900">14. 変更と更新</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">14.1 規約の変更</h4>
+<p>当社は、いつでも本規約を変更する権利を留保します。変更は、更新された発効日とともに当社のウェブサイトに掲載された時点で有効になります。当社のサービスの継続使用は、変更された規約の受諾を構成します。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">14.2 重要な変更の通知</h4>
+<p>お客様の権利に重大な影響を与える重要な変更については、当社のウェブサイト、メール、またはその他の適切な手段を通じて合理的な通知を提供します。</p>
+<h3 class="text-xl font-semibold text-gray-900">15. 終了</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">15.1 終了の権利</h4>
+<p>当社は、理由の有無にかかわらず、通知の有無にかかわらず、いつでもお客様の当社サービスへのアクセスを停止または終了することができます。お客様はいつでも当社のサービスの使用を中止できます。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">15.2 終了の効果</h4>
+<p>終了すると、お客様の当社サービスを使用する権利は直ちに停止します。その性質上終了後も存続すべき条項は、知的財産権、免責事項、責任の制限を含め、引き続き有効です。</p>
+<h3 class="text-xl font-semibold text-gray-900">16. 分離可能性と完全合意</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">16.1 分離可能性</h4>
+<p>本規約のいずれかの条項が執行不能であると判断された場合、残りの条項は完全に有効に存続します。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">16.2 完全合意</h4>
+<p>本規約は、当社のプライバシーポリシーおよび当社のサービスに掲載されたその他の法的通知とともに、お客様とザ・ガーデン・カルチャーとの間の完全な合意を構成します。</p>
+<h3 class="text-xl font-semibold text-gray-900">17. 連絡先情報と法的通知</h3>
+<p>本規約に関する質問または法的通知については：</p>
+<div class="bg-gray-50 p-4 rounded-lg mt-4">
+<p><strong>ザ・ガーデン・カルチャー LLC</strong><br>
+<strong>法務部</strong><br>
+103 W Main St<br>
+Carrboro, North Carolina 27510<br>
+<strong>メール：</strong> legal@thegardenculture.online<br>
+<strong>電話：</strong> (919) 967-6985<br>
+<strong>営業時間：</strong> 月曜日〜金曜日、9:00〜18:00 EST</p>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">18. Google広告およびビジネスポリシーコンプライアンス</h3>
+<p>本規約および当社の事業慣行は、以下を遵守するように設計されています：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>Google広告ポリシーおよび編集ガイドライン</li>
+<li>Googleビジネスプロフィールポリシー</li>
+<li>連邦取引委員会法および消費者保護法</li>
+<li>州消費者保護法</li>
+<li>オンライン広告業界の基準とベストプラクティス</li>
+</ul>
+<p class="mt-6 text-sm italic">本規約は、Googleのポリシーおよび適用されるすべての法律に従った、法的コンプライアンス、消費者保護、倫理的な事業慣行への当社のコミットメントを示しています。</p>
+<p class="text-sm"><strong>文書バージョン：</strong> 2.0 | <strong>発効日：</strong> 2024年1月1日</p>
+</div>
+</div>
+</div>
+</div>
+<div id="disclaimer" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="bg-white rounded-xl max-w-4xl max-h-[90vh] overflow-y-auto p-8">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-3xl font-bold text-gray-900">免責事項</h2>
+<button class="disclaimer-close w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div class="prose max-w-none text-gray-600 space-y-4">
+<p><strong>発効日:</strong> 2024年1月1日</p>
+<p><strong>最終更新:</strong> 2024年1月1日</p>
+<p><strong>バージョン:</strong> 4.0 - Googleポリシーコンプライアンス強化版</p>
+<div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+<div class="flex">
+<div class="flex-shrink-0">
+<i class="ri-alert-line text-red-500 text-xl"></i>
+</div>
+<div class="ml-3">
+<p class="text-red-700 font-semibold">重要な法的免責事項</p>
+<p class="text-red-600 text-sm">この免責事項には、当社のサービスの制限とお客様の権利に関する重要な情報が含まれています。当社のウェブサイトまたはサービスを使用する前に、注意深くお読みください。</p>
+</div>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">1. 包括的なウェブサイトおよびサービスの免責事項</h3>
+<p>ザ・ガーデン・カルチャー LLC（以下「当社」）は、このウェブサイトを運営し、すべての情報、コンテンツ、製品、およびサービス（以下総称して「サービス」）を、以下を厳格に遵守して提供しています：</p>
+<ul class="list-disc pl-6 space-y-1 mb-4">
+<li><strong>Google広告ポリシーおよびガイドライン：</strong> コンテンツポリシー、禁止慣行、編集基準、広告コンプライアンス要件を含む</li>
+<li><strong>Googleビジネスプロフィールポリシー：</strong> 正確な事業表現、顧客対応基準、レビュー管理慣行のため</li>
+<li><strong>連邦取引委員会（FTC）法第5条：</strong> 商業における不公正または欺瞞的な行為または慣行の禁止</li>
+<li><strong>FTC広告およびマーケティングガイドライン：</strong> 実証要件、推奨ガイドライン、真実広告基準を含む</li>
+<li><strong>消費者保護法：</strong> 消費者の権利と利益を保護する連邦および州の規制</li>
+<li><strong>デジタル広告同盟（DAA）自主規制原則：</strong> デジタル広告における責任あるデータ収集と使用のため</li>
+</ul>
+<p><strong>情報提供の根拠：</strong> すべてのコンテンツは「現状有姿」、「提供可能な範囲」、および「すべての欠陥を含む」ベースで提供され、正確性、完全性、信頼性、商品性、特定目的への適合性を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証、表明、保証もありません。</p>
+<p><strong>情報の正確性：</strong> 正確性を期していますが、このウェブサイトの情報は「現状有姿」および「提供可能な範囲」で提供され、明示または黙示を問わず、いかなる種類の保証もありません。当社は、このウェブサイトに含まれる情報、製品、サービス、または関連するグラフィックの完全性、正確性、信頼性、適合性、または可用性について、いかなる表明も保証も行いません。</p>
+<h3 class="text-xl font-semibold text-gray-900">2. 教育コンテンツおよび植物ケア専門家の免責事項</h3>
+<div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mb-4">
+<p class="text-yellow-800 font-semibold mb-2"><i class="ri-information-line mr-2"></i>教育コンテンツのみ</p>
+<p class="text-yellow-700 text-sm">すべてのガーデニングと植物ケアの情報は教育目的のみで提供され、専門的な農業、園芸、植物学のアドバイスと見なされるべきではありません。</p>
+</div>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.1 ガーデニング情報の範囲と制限</h4>
+<p><strong>教育目的のみ：</strong> 当社のウェブサイト、ブログ、ニュースレター、顧客コミュニケーションを通じて提供されるすべての植物ケアのアドバイス、ガーデニングのヒント、栽培ガイド、栽培技術、害虫管理の提案、園芸情報は、<strong>教育および情報提供のみを目的としています</strong>。</p>
+<p><strong>専門的アドバイスではありません：</strong> 当社のコンテンツは、以下として、または以下に依拠されるべきものではありません：</p>
+<ul class="list-disc pl-6 space-y-1 mb-4">
+<li>専門的な園芸、農業、植物学の相談</li>
+<li>科学的な植物病理学または害虫管理のアドバイス</li>
+<li>商業栽培または農業事業のガイダンス</li>
+<li>認定オーガニック栽培の相談</li>
+<li>専門的なランドスケープアーキテクチャまたはデザインサービス</li>
+<li>認可された農薬適用の推奨</li>
+<li>環境または生態系への影響評価</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.2 個別の結果の免責事項と変動要因</h4>
+<div class="bg-blue-50 border border-blue-200 p-4 rounded-lg mb-4">
+<p class="text-blue-800 font-semibold mb-2"><i class="ri-bar-chart-line mr-2"></i>結果は大きく異なる場合があります</p>
+<p class="text-blue-700 text-sm">植物ケアの成功は、当社の制御を超えた多数の個別要因に依存します。特定の結果や成果を保証することはできません。</p>
+</div>
+<p><strong>結果の保証なし：</strong> 植物ケアの成功、成長パフォーマンス、開花、結実、生存率、および全体的な植物の健康は、当社の知識や制御を超えた、多数の複雑で相互に関連する要因に依存します。これには以下が含まれますが、これらに限定されません：</p>
+<ul class="list-disc pl-6 space-y-1 mb-4">
+<li><strong>環境変数：</strong> 気候条件、季節変動、湿度レベル、空気循環、温度変動、自然光の可用性、地域の気象パターン</li>
+<li><strong>栽培培地の要因：</strong> 土壌組成、排水特性、pHレベル、栄養素含有量、汚染、改良履歴</li>
+<li><strong>ケア実践の変数：</strong> 水やりの頻度と技術、施肥方法とタイミング、剪定慣行、植え替え手順、害虫管理アプローチ</li>
+<li><strong>個々の植物の特性：</strong> 種内の遺伝的変異、植物の年齢と成熟度、以前のケア履歴、根系の健康、ストレス耐性</li>
+<li><strong>地理的および地域的要因：</strong> 耐寒性ゾーン、地域の害虫圧力、病害の蔓延、水質、空気質、標高の影響</li>
+<li><strong>ユーザーの経験とスキルレベル：</strong> ガーデニングの経験、細部への注意力、ケアの一貫性、問題を認識する能力、植物のニーズへの対応</li>
+</ul>
+<p><strong>特定の成果の免責：</strong> 当社は、特定の植物の生存率、成長測定値、開花スケジュール、収穫量、またはその他の測定可能な成果に関する保証、保証、または表明を明示的に否認します。個々の結果は大きく異なり、当社のウェブサイトに掲載されている例、ケーススタディ、成功事例とは大きく異なる場合があります。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">2.3 専門家への相談を推奨</h4>
+<p>特定の植物病害、重度の害虫被害、複雑な栽培課題、商業栽培作業、または貴重またはかけがえのない植物を含む状況については、以下への相談を強くお勧めします：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>認可された専門の園芸家または認定マスターガーデナー</li>
+<li>地域の農業普及所または大学の普及プログラム</li>
+<li>病害の診断と治療のための植物病理学者</li>
+<li>樹木および大規模植物のケアのための認定樹木医</li>
+<li>お客様の特定の栽培条件に精通した地域の苗床専門家</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">3. 製品およびサービスの免責事項</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">3.1 生きた植物の免責事項</h4>
+<p><strong>植物の生存の保証なし：</strong> 当社は慎重に健康な植物を選択して発送しますが、配達後の植物の生存、成長パフォーマンス、開花、結実、または長期的な健康を保証することはできませんし、保証しません。植物の生存と成功は、完全に以下に依存します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>当社が提供する指示および一般的なベストプラクティスに従った適切なケア</li>
+<li>適切な環境条件（光、温度、湿度、空気循環）</li>
+<li>正しい水やり、施肥、メンテナンスの実践</li>
+<li>害虫、病害、環境ストレスからの保護</li>
+<li>新しい栽培環境への適切な順応</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">3.2 製品の性能と期待</h4>
+<ul class="list-disc pl-6 space-y-1">
+<li>製品の画像、説明、仕様は説明目的であり、実際の外観、サイズ、性能を反映していない場合があります</li>
+<li>植物のサイズ、色、形、成長パターンの自然な変動は正常で予想されます</li>
+<li>季節的な入手可能性と植物の成熟度は、製品の入手可能性と特性に影響を与える場合があります</li>
+<li>栽培用具、肥料、用品は、使用方法、環境条件、適用方法によって性能が異なる場合があります</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">3.3 サービスの制限</h4>
+<p>当社の教育コンテンツとカスタマーサポートサービスは、一般的なガイダンスのみを目的としています。当社は以下を提供しません：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>専門的な植物の診断または治療サービス</li>
+<li>植物の問題や病害に対する保証された解決策</li>
+<li>適切な評価なしのサイト固有の栽培推奨</li>
+<li>商業または大規模栽培の相談</li>
+<li>緊急の植物ケアサービス</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">4. 健康と安全の免責事項</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">4.1 植物の安全性と毒性</h4>
+<p><strong>重要な安全警告：</strong> 一部の植物は、摂取、接触、または吸入すると、人、ペット、または家畜に有毒または有害である可能性があります。植物を購入またはケアする前に：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>特に子供、ペット、アレルギーのある人がいる場合は、潜在的な毒性と安全上の懸念を調査してください</li>
+<li>具体的な安全情報については、獣医、小児科医、または毒物管理センターに相談してください</li>
+<li>植物、土壌、肥料、農薬を扱うときは、適切な保護具（手袋、マスク、保護メガネ）を使用してください</li>
+<li>潜在的に有害な植物は、子供やペットの手の届かないところに保管してください</li>
+<li>誤って摂取したり、有害な反応が発生した場合は、直ちに医師の診察を受けてください</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">4.2 アレルギー反応と過敏症</h4>
+<p>個人は、植物、花粉、土壌、肥料、またはその他のガーデニング材料に対してアレルギー反応や過敏症を経験する場合があります。有害な反応が発生した場合は、使用を中止し、医療専門家に相談してください。</p>
+<h3 class="text-xl font-semibold text-gray-900">5. 第三者コンテンツと外部リンク</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">5.1 外部ウェブサイトの免責事項</h4>
+<p>当社のウェブサイトには、ザ・ガーデン・カルチャーが所有、管理、運営していない第三者のウェブサイト、サービス、またはリソースへのリンクが含まれる場合があります。当社はこれらのリンクを便宜のために提供しており、以下を行いません：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>第三者のコンテンツ、製品、サービスを推奨、承認、または推薦すること</li>
+<li>外部サイトのコンテンツ、正確性、可用性を制御または監視すること</li>
+<li>第三者サイトのプライバシー慣行、セキュリティ、コンテンツに対して責任を負うこと</li>
+<li>第三者情報の正確性、完全性、有用性を保証すること</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">5.2 ユーザー生成コンテンツ</h4>
+<p>レビュー、コメント、写真、その他のユーザー生成コンテンツは、個々の意見と経験を表しています。このコンテンツは当社の見解を反映しておらず、他のユーザーに同様の結果を保証するものではありません。</p>
+<h3 class="text-xl font-semibold text-gray-900">6. テクノロジーとウェブサイトの機能</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">6.1 システムの可用性</h4>
+<p>当社は、ウェブサイトまたはサービスへの中断のないアクセスを保証しません。当社のウェブサイトは、メンテナンス、更新、技術的問題、または当社の制御を超えた状況により、一時的に利用できなくなる場合があります。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">6.2 データと情報のセキュリティ</h4>
+<p>当社はお客様の情報を保護するためのセキュリティ対策を実施していますが、インターネット経由で送信されるデータまたは当社のシステムに保存されるデータの絶対的なセキュリティを保証することはできません。</p>
+<h3 class="text-xl font-semibold text-gray-900">7. 地理的および気候の制限</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">7.1 地域差</h4>
+<p>植物ケアのアドバイスは、すべての地理的地域、気候帯、または栽培条件に適しているとは限りません。情報は主に温帯気候条件に基づいており、以下に適応する必要がある場合があります：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>極端な気候条件（熱帯、北極、砂漠、高地）</li>
+<li>異なる耐寒性ゾーンと季節パターン</li>
+<li>地域の土壌条件、水質、環境要因</li>
+<li>地域の害虫と病害の圧力</li>
+<li>植物の輸入、処理、栽培に関する地域の規制</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">8. 法的および規制上のコンプライアンス</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">8.1 地域の法律と規制</h4>
+<p>ユーザーは、以下に関するすべての地方、州、および連邦法を遵守する責任があります：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>植物の輸入、輸出、州間輸送</li>
+<li>農薬と肥料の使用と適用</li>
+<li>水の使用と保全の制限</li>
+<li>保護または絶滅危惧種の植物</li>
+<li>ホームオーナー協会または地方自治体の造園規制</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">8.2 オーガニックおよび自然製品の表示</h4>
+<p>「オーガニック」、「ナチュラル」、または「エコフレンドリー」な製品または方法への言及は、一般的な情報のみを目的としています。実際の認証とオーガニック基準への準拠は、独立して確認する必要があります。</p>
+<h3 class="text-xl font-semibold text-gray-900">9. 責任と損害の制限</h3>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">9.1 保証なし</h4>
+<p><strong>保証の免責：</strong> 法律で許容される最大限の範囲で、ザ・ガーデン・カルチャーは、明示または黙示を問わず、以下を含むがこれらに限定されないすべての保証を否認します：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>商品性および特定目的への適合性の保証</li>
+<li>非侵害または権原の保証</li>
+<li>当社のサービスが中断されない、またはエラーがないという保証</li>
+<li>コンテンツの正確性または完全性に関する保証</li>
+<li>植物の生存、成長、または性能の保証</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">9.2 責任の制限</h4>
+<p><strong>損害の制限：</strong> 法律で許容される最大限の範囲で、ザ・ガーデン・カルチャーは以下に対して責任を負いません：</p>
+<ul class="list-disc pl-6 space-y-1">
+<li>直接的、間接的、偶発的、特別、結果的、または懲罰的損害</li>
+<li>利益、収益、データ、使用、またはその他の経済的利益の損失</li>
+<li>植物の損失、財産的損害、または人身傷害</li>
+<li>当社のコンテンツまたはサービスへの依拠から生じる損害</li>
+<li>第三者コンテンツまたはサービスから生じる損害</li>
+</ul>
+<p><strong>損害上限：</strong> 当社の総責任は、請求の前の12ヶ月間にお客様が当社に支払った金額、または100ドルのいずれか大きい方を超えないものとします。</p>
+<h3 class="text-xl font-semibold text-gray-900">10. 包括的なGoogle広告およびビジネスポリシーコンプライアンスフレームワーク</h3>
+<div class="bg-green-50 border border-green-200 p-4 rounded-lg mb-4">
+<p class="text-green-800 font-semibold mb-2"><i class="ri-shield-check-line mr-2"></i>厳格なポリシーコンプライアンス</p>
+<p class="text-green-700 text-sm">当社の事業慣行とこの免責事項は、Googleのポリシー要件および適用されるすべての広告規制を超えるように設計されています。</p>
+</div>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.1 Googleプラットフォームポリシーの遵守</h4>
+<p><strong>包括的なコンプライアンスフレームワーク：</strong> この免責事項および当社のすべての事業慣行、コンテンツ作成、顧客対応、広告活動は、以下への厳格な遵守を維持するように特別に設計されています：</p>
+<ul class="list-disc pl-6 space-y-1 mb-4">
+<li><strong>Google広告ポリシー（完全なフレームワーク）：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>禁止コンテンツポリシーと制限慣行ガイドライン</li>
+<li>編集および専門基準の要件</li>
+<li>誤解を招くコンテンツの防止と正確性基準</li>
+<li>ユーザーの安全とエクスペリエンスの保護措置</li>
+<li>データ収集とプライバシーコンプライアンス要件</li>
+<li>ランディングページの品質とユーザーエクスペリエンス基準</li>
+</ul>
+</li>
+<li><strong>Googleビジネスプロフィールポリシー（完全な範囲）：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>正確な事業情報と表現基準</li>
+<li>顧客レビューの管理と対応要件</li>
+<li>禁止コンテンツとスパム防止ガイドライン</li>
+<li>写真とコンテンツの品質基準</li>
+<li>事業の確認と真正性の要件</li>
+<li>ローカル検索最適化の倫理的慣行</li>
+</ul>
+</li>
+<li><strong>Google Analyticsおよび開発者ポリシー：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>データ収集と処理のコンプライアンス</li>
+<li>ユーザーのプライバシーと同意の管理</li>
+<li>適切な実装と使用ガイドライン</li>
+<li>データ共有と第三者統合の基準</li>
+</ul>
+</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.2 連邦および州の規制コンプライアンス</h4>
+<p><strong>法的コンプライアンス基準：</strong> 当社の慣行は、以下を含む適用されるすべての連邦および州の規制を遵守しています：</p>
+<ul class="list-disc pl-6 space-y-1 mb-4">
+<li><strong>連邦取引委員会（FTC）の包括的要件：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>不公正または欺瞞的な行為または慣行の禁止に関する第5条</li>
+<li>真実広告基準と実証要件</li>
+<li>推奨および証言ガイドライン（16 CFR Part 255）</li>
+<li>オンライン広告およびマーケティングの開示要件</li>
+<li>消費者プライバシーとデータ保護ガイドライン</li>
+<li>中小企業向けガイダンスとコンプライアンス支援基準</li>
+</ul>
+</li>
+<li><strong>消費者保護法コンプライアンス：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>州の消費者保護法と規制</li>
+<li>欺瞞的取引慣行防止法</li>
+<li>オンライン取引と電子商取引の規制</li>
+<li>広告の実証と証拠の要件</li>
+<li>消費者の権利と救済規定</li>
+</ul>
+</li>
+<li><strong>デジタルマーケティングおよび広告基準：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>メールマーケティングのCAN-SPAM法コンプライアンス</li>
+<li>電話消費者保護法（TCPA）の遵守</li>
+<li>児童オンラインプライバシー保護法（COPPA）コンプライアンス</li>
+<li>アメリカ障害者法（ADA）デジタルアクセシビリティ要件</li>
+</ul>
+</li>
+</ul>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.3 広告主張の実証と証拠基準</h4>
+<div class="bg-purple-50 border border-purple-200 p-4 rounded-lg mb-4">
+<p class="text-purple-800 font-semibold mb-2"><i class="ri-file-text-line mr-2"></i>証拠に基づく主張のみ</p>
+<p class="text-purple-700 text-sm">すべての製品の主張と性能声明は、実質的な証拠に基づいており、FTCの実証要件を遵守しています。</p>
+</div>
+<p><strong>厳格な実証基準：</strong> すべての製品の主張、性能声明、便益の主張、マーケティングコミュニケーションは、以下に基づいており、以下によって裏付けられています：</p>
+<ul class="list-disc pl-6 space-y-1 mb-4">
+<li><strong>科学的および学術的資料：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>査読済みの園芸および植物学研究出版物</li>
+<li>大学の普及サービスのガイダンスと推奨</li>
+<li>農業研究ステーションの調査結果と報告</li>
+<li>専門の園芸協会の基準とベストプラクティス</li>
+<li>認定マスターガーデナーのトレーニング資料とプロトコル</li>
+</ul>
+</li>
+<li><strong>業界標準と専門的慣行：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>確立された商業栽培と栽培方法</li>
+<li>専門の苗床および温室の運営基準</li>
+<li>認定オーガニック栽培慣行とUSDAガイドライン</li>
+<li>総合的害虫管理（IPM）認定技術</li>
+<li>持続可能なガーデニングと環境管理慣行</li>
+</ul>
+</li>
+<li><strong>文書化された顧客体験：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>文書化された証拠を伴う検証済みの顧客成功事例</li>
+<li>顧客の同意を得たビフォーアフター写真の文書化</li>
+<li>顧客調査データとフィードバック分析</li>
+<li>長期的な顧客フォローアップと成果の追跡</li>
+<li>独立した第三者による顧客体験の検証</li>
+</ul>
+</li>
+<li><strong>専門家による検証：</strong>
+<ul class="list-circle pl-6 space-y-1 text-sm">
+<li>認可された園芸専門家によるレビューと承認</li>
+<li>認定マスターガーデナーによるコンテンツ検証</li>
+<li>植物病理学者および昆虫学者の専門家相談</li>
+<li>農業普及スペシャリストのガイダンスと監督</li>
+<li>専門の植物園および樹木園との協力</li>
+</ul>
+</li>
+</ul>
+<p><strong>重要な性能の免責事項：</strong> 厳格な実証努力にもかかわらず、<strong>個々の結果は大きく異なる場合があり、明示的に保証されません</strong>。植物ケアの成功は、当社の制御を超えた多数の要因に依存し、いかなる成果も約束または保証することはできません。すべての主張は理想的な条件下での典型的な結果を表しており、個々のユーザー体験を代表するものではない場合があります。</p>
+<h4 class="text-lg font-semibold text-gray-800 mt-4">10.4 継続的なコンプライアンス監視と更新</h4>
+<p><strong>継続的なコンプライアンスプログラム：</strong> 当社は以下を通じて厳格なコンプライアンスを維持します：</p>
+<ul class="list-disc pl-6 space-y-1 mb-4">
+<li>資格のある法律顧問による四半期ごとの法的およびポリシーコンプライアンスレビュー</li>
+<li>Googleポリシーの更新と実装要件の定期的な監視</li>
+<li>広告法とプラットフォームポリシーに関するスタッフの継続的なトレーニング</li>
+<li>第三者のコンプライアンス監査と法的評価</li>
+<li>規制当局および業界団体との積極的な関与</li>
+<li>ポリシー違反防止のためのフィードバックループの実装</li>
+<li>すべてのコンプライアンス努力と是正措置の文書化</li>
+</ul>
+<h3 class="text-xl font-semibold text-gray-900">11. 紛争および質問のための連絡先情報</h3>
+<p>この免責事項に関する質問、問題の報告、または苦情の申し立てについては：</p>
+<div class="bg-gray-50 p-4 rounded-lg mt-4">
+<p><strong>ザ・ガーデン・カルチャー LLC</strong><br>
+<strong>カスタマーサービスおよび法務部</strong><br>
+103 W Main St<br>
+Carrboro, North Carolina 27510<br>
+<strong>メール：</strong> legal@thegardenculture.online<br>
+<strong>カスタマーサービス：</strong> support@thegardenculture.online<br>
+<strong>電話：</strong> (919) 967-6985<br>
+<strong>営業時間：</strong> 月曜日〜金曜日、9:00〜18:00 EST</p>
+</div>
+<h3 class="text-xl font-semibold text-gray-900">12. 更新と変更</h3>
+<p>当社は、適用される法律とポリシーへのコンプライアンスを維持するために、この免責事項をいつでも更新する権利を留保します。変更は、更新された発効日とともに当社のウェブサイトに掲載されます。当社のサービスの継続使用は、変更の受諾を構成します。</p>
+<h3 class="text-xl font-semibold text-gray-900">13. 分離可能性と準拠法</h3>
+<p>この免責事項のいずれかの条項が執行不能であると判断された場合、残りの条項は完全に有効に存続します。この免責事項は、抵触法の原則に関係なく、米国ノースカロライナ州の法律に準拠します。</p>
+<div class="bg-gray-100 border border-gray-300 p-6 rounded-lg mt-8">
+<h4 class="text-lg font-semibold text-gray-900 mb-4">包括的なコンプライアンスと倫理基準へのコミットメント</h4>
+<p class="text-gray-700 mb-4"><strong>揺るぎないコンプライアンスへの献身：</strong> この包括的な免責事項は、最高水準の法的コンプライアンス、消費者保護、広告の誠実性、倫理的な事業慣行に対する当社の揺るぎないコミットメントを表しています。当社は、以下を含む適用されるすべての要件を満たすだけでなく超えるようにポリシーと手順を設計しました：</p>
+<ul class="list-disc pl-6 space-y-1 text-sm text-gray-600 mb-4">
+<li>Google広告ポリシーおよび編集ガイドライン（完全なフレームワーク）</li>
+<li>Googleビジネスプロフィールポリシーおよび管理基準</li>
+<li>連邦取引委員会法および消費者保護規制</li>
+<li>州消費者保護法および広告基準</li>
+<li>デジタルマーケティングコンプライアンスおよびプライバシー保護要件</li>
+<li>業界のベストプラクティスと専門基準</li>
+</ul>
+<p class="text-gray-700 mb-4"><strong>透明性と説明責任：</strong> 当社は、透明な事業慣行と、制限、リスク、現実的な期待の明確なコミュニケーションが、お客様の利益と規制コンプライアンス要件の両方に資すると信じています。この免責事項は、顧客保護と情報に基づいた意思決定を優先する、誠実で倫理的な事業運営への当社のコミットメントを反映しています。</p>
+<p class="text-gray-700"><strong>継続的改善：</strong> 当社のコンプライアンスフレームワークは、進化する規制、プラットフォームポリシー、業界のベストプラクティスを反映するために定期的にレビュー、更新、強化されています。当社は、最高水準の事業の誠実性を維持するために、お客様、規制当局、業界パートナーからのフィードバックを歓迎します。</p>
+</div>
+<div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
+<p class="text-blue-800 font-semibold mb-2">文書情報とバージョン管理</p>
+<div class="text-sm text-blue-700 space-y-1">
+<p><strong>文書バージョン：</strong> 4.0 - Googleポリシーコンプライアンス強化版</p>
+<p><strong>発効日：</strong> 2024年1月1日</p>
+<p><strong>最終更新：</strong> 2024年1月1日</p>
+<p><strong>法的レビュースケジュール：</strong> 資格のある法律顧問による四半期ごとのコンプライアンスレビュー</p>
+<p><strong>ポリシー監視：</strong> 規制の変更とプラットフォームの更新の継続的な監視</p>
+<p><strong>次回予定レビュー：</strong> 2024年4月1日</p>
+<p><strong>コンプライアンス責任者：</strong> legal@thegardenculture.online で質問を受け付けています</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script id="navbar-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+navbar.classList.add('navbar-solid');
+} else {
+navbar.classList.remove('navbar-solid');
+}
+});
+});
+</script>
+<script id="mobile-menu-toggle">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.add('open');
+});
+mobileMenuClose.addEventListener('click', function() {
+mobileMenu.classList.remove('open');
+});
+mobileMenu.addEventListener('click', function(e) {
+if (e.target.tagName === 'A') {
+mobileMenu.classList.remove('open');
+}
+});
+});
+</script>
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetSection = document.querySelector(targetId);
+if (targetSection) {
+targetSection.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+});
+</script>
+<script id="fade-in-animation">
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('.fade-in').forEach(el => {
+observer.observe(el);
+});
+});
+</script>
+<script id="modal-handlers">
+document.addEventListener('DOMContentLoaded', function() {
+const privacyLinks = document.querySelectorAll('a[href="#privacy"]');
+const termsLinks = document.querySelectorAll('a[href="#terms"]');
+const disclaimerLinks = document.querySelectorAll('a[href="#disclaimer"]');
+const privacyModal = document.getElementById('privacy');
+const termsModal = document.getElementById('terms');
+const disclaimerModal = document.getElementById('disclaimer');
+const cartModal = document.getElementById('cart-modal');
+const blogModal = document.getElementById('blog-modal');
+const infoModal = document.getElementById('info-modal');
+privacyLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+privacyModal.classList.remove('hidden');
+});
+});
+termsLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+termsModal.classList.remove('hidden');
+});
+});
+disclaimerLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+disclaimerModal.classList.remove('hidden');
+});
+});
+document.querySelectorAll('.privacy-close').forEach(btn => {
+btn.addEventListener('click', function() {
+privacyModal.classList.add('hidden');
+});
+});
+document.querySelectorAll('.terms-close').forEach(btn => {
+btn.addEventListener('click', function() {
+termsModal.classList.add('hidden');
+});
+});
+document.querySelectorAll('.disclaimer-close').forEach(btn => {
+btn.addEventListener('click', function() {
+disclaimerModal.classList.add('hidden');
+});
+});
+document.querySelectorAll('.cart-close').forEach(btn => {
+btn.addEventListener('click', function() {
+cartModal.classList.add('hidden');
+});
+});
+document.querySelectorAll('.blog-close').forEach(btn => {
+btn.addEventListener('click', function() {
+blogModal.classList.add('hidden');
+});
+});
+document.querySelectorAll('.info-close').forEach(btn => {
+btn.addEventListener('click', function() {
+infoModal.classList.add('hidden');
+});
+});
+[privacyModal, termsModal, disclaimerModal, cartModal, blogModal, infoModal].forEach(modal => {
+modal.addEventListener('click', function(e) {
+if (e.target === modal) {
+modal.classList.add('hidden');
+}
+});
+});
+});
+</script>
+<script id="button-interactions">
+document.addEventListener('DOMContentLoaded', function() {
+const getStartedBtns = document.querySelectorAll('#get-started-btn, #get-started-mobile-btn');
+const explorePlantsBtn = document.getElementById('explore-guides-btn');
+const learnMoreBtn = document.getElementById('learn-more-btn');
+const viewAllGuidesBtn = document.getElementById('view-all-guides-btn');
+const newsletterSubscribe = document.getElementById('newsletter-subscribe');
+const contactForm = document.getElementById('contact-form');
+const successNotification = document.getElementById('success-notification');
+function showSuccess(message) {
+document.getElementById('success-message').textContent = message;
+successNotification.classList.remove('hidden');
+setTimeout(() => {
+successNotification.classList.add('hidden');
+}, 3000);
+}
+getStartedBtns.forEach(btn => {
+btn.addEventListener('click', function() {
+document.querySelector('#newsletter').scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+if (explorePlantsBtn) {
+explorePlantsBtn.addEventListener('click', function() {
+document.querySelector('#guides').scrollIntoView({
+behavior: 'smooth'
+});
+});
+}
+if (learnMoreBtn) {
+learnMoreBtn.addEventListener('click', function() {
+document.querySelector('#about').scrollIntoView({
+behavior: 'smooth'
+});
+});
+}
+if (viewAllGuidesBtn) {
+viewAllGuidesBtn.addEventListener('click', function() {
+showInfoModal('すべての植物ガイド', '当社の包括的なガイドライブラリには、観葉植物、屋外ガーデニング、繁殖技術、季節のケア、害虫管理、トラブルシューティングのヒントをカバーする200以上の詳細な植物ケア記事が含まれています。カテゴリー別に閲覧するか、特定の植物を検索してください！');
+});
+}
+const newsletterForm = document.getElementById('newsletter-form');
+if (newsletterForm) {
+newsletterForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const emailInput = document.getElementById('newsletter-email');
+const email = emailInput.value.trim();
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!email) {
+showInfoModal('メールアドレスが必要です', 'ニュースレターを購読して毎週の植物ケアのヒントを受け取るには、メールアドレスを入力してください。');
+return;
+}
+if (!emailRegex.test(email)) {
+showInfoModal('無効なメールアドレス', 'ニュースレターを購読して毎週の植物ケアのヒントを受け取るには、有効なメールアドレスを入力してください。');
+return;
+}
+const formData = new FormData();
+formData.append('email', email);
+fetch('https://readdy.ai/api/submit-form/newsletter', {
+method: 'POST',
+body: formData
+}).then(response => {
+if (response.ok) {
+showSuccess('ニュースレターの購読が完了しました！ザ・ガーデン・カルチャー・コミュニティへようこそ。');
+emailInput.value = '';
+} else {
+showInfoModal('購読エラー', '購読に問題が発生しました。後でもう一度お試しいただくか、サポートチームにお問い合わせください。');
+}
+}).catch(error => {
+showInfoModal('ネットワークエラー', 'インターネット接続を確認して、もう一度お試しください。');
+});
+});
+}
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+showSuccess('メッセージが正常に送信されました！24時間以内にご返信いたします。');
+contactForm.reset();
+});
+}
+document.querySelectorAll('.guide-read-btn').forEach(btn => {
+btn.addEventListener('click', function() {
+const guideName = this.getAttribute('data-guide');
+showGuideModal(guideName);
+});
+});
+document.querySelectorAll('.blog-read-more').forEach(btn => {
+btn.addEventListener('click', function() {
+const title = this.getAttribute('data-title');
+showBlogModal(title);
+});
+});
+const infoLinks = {
+'#newsletter': ['ニュースレター購読', '毎週のニュースレターを購読して、最新の植物ケアのヒント、季節のガイド、新記事の通知、ガーデニングの専門家による限定コンテンツをお受け取りください。'],
+'#archives': ['記事アーカイブ', '日付、カテゴリー、難易度別に整理された植物ケア記事の完全なコレクションをご覧ください。基本的なケアから高度な技術までをカバーする500以上の記事があります。'],
+'#categories': ['植物カテゴリー', '種類別に整理された植物ケアガイドを探索してください：観葉植物、多肉植物、ハーブ、野菜、屋外植物、特殊な品種。お探しのものがきっと見つかります！'],
+'#faq': ['よくある質問', '包括的なFAQセクションで、一般的な植物ケアの質問、トラブルシューティングのヒント、ガーデニングのアドバイスへの回答を見つけてください。お探しのものが見つかりませんか？専門家にお尋ねください！'],
+'#resources': ['無料リソース', '無料の植物ケアチェックリスト、季節カレンダー、トラブルシューティングガイド、印刷可能な植物識別カードをダウンロードして、ガーデニングの旅をサポートしてください。'],
+'#support': ['ヘルプセンター', '当社の植物の専門家がお手伝いします！パーソナライズされたガーデニングのアドバイス、植物の同定支援、具体的なケアの質問への回答についてお問い合わせください。'],
+'#plant-care': ['植物ケアライブラリ', 'すべての植物品種の詳細なガイド、季節のケアのヒント、トラブルシューティングのアドバイス、専門家の推奨事項を含む包括的な植物ケアライブラリにアクセスしてください。']
+};
+Object.keys(infoLinks).forEach(selector => {
+document.querySelectorAll(`a[href="${selector}"]`).forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const [title, content] = infoLinks[selector];
+showInfoModal(title, content);
+});
+});
+});
+function showGuideModal(guideName) {
+showInfoModal(guideName, `この包括的なガイドでは、${guideName}について知っておく必要のあるすべてをカバーしています。水やりのスケジュール、照明要件、一般的な問題、成功のための専門家のヒントが含まれています。当社の詳細なガイドは、初心者と経験豊富な植物愛好家の両方が元気な植物を育てるのに役立ちます。`);
+}
+function showBlogModal(title) {
+document.getElementById('blog-modal-title').textContent = title;
+document.getElementById('blog-modal').classList.remove('hidden');
+}
+function showInfoModal(title, content) {
+document.getElementById('info-modal-title').textContent = title;
+document.getElementById('info-modal-content').innerHTML = `<p>${content}</p>`;
+document.getElementById('info-modal').classList.remove('hidden');
+}
+});
+</script>
 
-</body>
+  
+
+<!-- Mirrored from thegardenculture.online/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 May 2026 04:53:22 GMT -->
 </html>
